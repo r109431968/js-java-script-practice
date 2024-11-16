@@ -31,6 +31,6 @@ console.log(Array.from({name: "Hitesh"})) // // Empty array dega kyu ki vo nhi s
 let score1 = 100
 let score2 = 200
 let score3 = 300
-console.log(Array.of(score1, score2, score3)) // it makes the array of variables values.
+console.log(Array.of(score1, score2, score3)) // it change the variables in to array.
 
 
