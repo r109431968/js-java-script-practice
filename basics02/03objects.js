@@ -47,8 +47,9 @@ const users = [
         email: "pt@gmail.com"
     },
 ]
-
-users[1].email
+// let a = users[1].email
+// console.log(a)
+// console.log(users[1].email)
 
 
 // console.log(tinderUser);
@@ -69,5 +70,10 @@ const course = {
 // const{courseInstrctor} = course
 // console.log(courseInstrctor);
 
-// const{courseInstrctor: instructor} = course
+// const{courseInstrctor: instructor} = course // it called object destructor.
 // console.log(instructor);
+
+// [
+//     {id: "Rahul"},
+//     {age: 28}
+// ]
