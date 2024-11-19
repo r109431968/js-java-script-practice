@@ -25,7 +25,7 @@ function sayMyName() {
 //     console.log("Rahul") // this will work bcoz its written above return.
 //     //return res
 //     return num1 + num2
-//     console.log("Rahul") // its unrechable code bcoz what ever we write after return it will work or print.
+//     console.log("Rahul") // its unrechable code bcoz what ever we write after return it will nort work or print.
 // }
 
 // addTwoNum(77, 6) // now it will not print bcoz its not returning.
