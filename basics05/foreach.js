@@ -1,6 +1,6 @@
 const code = ["js", "py", "rb", "c#", "jq"]
 
-// These are all the way t write or print a object as function using foreach.
+// These are all the way to write or print a object as function using foreach.
 // code.forEach(function (val) {
 //     console.log(val);
 // });
