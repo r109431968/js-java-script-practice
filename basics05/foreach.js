@@ -1,12 +1,12 @@
 const code = ["js", "py", "rb", "c#", "jq"]
 
 // These are all the way to write or print a object as function using foreach.
-// code.forEach(function (val) {
+// code.forEach(function (val) { //here val refers to array items or values.
 //     console.log(val);
 // });
 
 
-// code.forEach( (item) => {
+// code.forEach( (item) => { // same thing item is doing what val is doing in above code.
 //     console.log(item);
     
 // });
@@ -15,7 +15,7 @@ const code = ["js", "py", "rb", "c#", "jq"]
 // function printMe(item) {
 //     console.log(item);
 // }
-// code.forEach(printMe)
+// code.forEach(printMe) // this is we are creating a function first then calling an array.
 
 
 // code.forEach((item, index, arr) => {
@@ -23,23 +23,23 @@ const code = ["js", "py", "rb", "c#", "jq"]
 // })
 
 
-const coding = [
-    {
-        languagename: "java",
-        languagefilename: "java"
-    },
-    {
-        languagename: "python",
-        languagefilename: "py"
-    },
-    {
-        languagename: "C#",
-        languagefilename: "c#"
-    }
-]
+// const coding = [
+//     {
+//         languagename: "java",
+//         languagefilename: "java"
+//     },
+//     {
+//         languagename: "python",
+//         languagefilename: "py"
+//     },
+//     {
+//         languagename: "C#",
+//         languagefilename: "c#"
+//     }
+// ]
 
-coding.forEach((item) => 
-{
-    console.log(item.languagename);
+// coding.forEach((item) => 
+// {
+//     console.log(item.languagename);
     
-})
+// })

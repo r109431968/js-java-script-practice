@@ -54,12 +54,16 @@ const user = {
 
 // }
 
-// Below in implicite function or one line function, in the function don't need to write a return bcoz it already one line function.
+// Below in implicite function or one line function, in the function don't need to write 
+// a return bcoz it already one line function.
 //const addTwo = (num1, num2) => num1 + num2
              // OR
 // const addTwo = (num1, num2) => (num1 + num2)
 
 // return object in this
-const addTwo = (num1, num2) => ({username: "Rahul Tiwari"}) //output { username: 'Rahul Tiwari' }
+const addTwo = (num1, num2) => ({username: "Rahul Tiwari"}) // yahan agre hm curlly 
+// brackkets lgate hain to scope start ho jata hai means sare variable srf usi
+// me use ho skte hain ab or hme return bhi krna padega or return likhna hi padega.
+//output { username: 'Rahul Tiwari' }
 
 console.log(addTwo(98, 7));

@@ -1,4 +1,4 @@
-// Ab yahan hm object k bare me dekh rhe hain ki object ko iterate kese kr skte hain.
+// Ab yahan hm object k bare me dekh rhe hain ki object ko iterate kese kr skte hain hm usse forof me nhi kr poa rhe the.
 
 // const myObject = {
 //     js: "javascript",

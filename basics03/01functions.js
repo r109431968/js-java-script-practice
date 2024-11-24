@@ -35,45 +35,45 @@ function sayMyName() {
 
 
 //function loginUserMsg(username = "sam") { // this line will work only when user empty chor de username ko to default name sam ayega.
-// function loginUserMsg(username) {
-//     // if(!username) // it means username is not.
-//     if(username === undefined){
-//         console.log("Please enter username !!")
-//         return 
-//     }
-//     return`${username} just logged in`
-// }
+function loginUserMsg(username) {
+    // if(!username) // it means username is not.
+    if(username === undefined){
+        console.log("Please enter username !!")
+        return 
+    }
+    return`${username} just logged in`
+}
 
-// console.log(loginUserMsg("Rahul"))
+console.log(loginUserMsg("Rahul"))
 // console.log(loginUserMsg()) // output "undefined just logged in"
 
 
-function calculateCartPrice(...num1) { // these ... three dots are rest operator, it's similar like spread operator but itd not spread operator, it depends on use and condition when it used so, we can call it rest or spread operator.
-    return num1
-}
+// function calculateCartPrice(...num1) { // these ... three dots are rest operator, it's similar like spread operator but itd not spread operator, it depends on use and condition when it used so, we can call it rest or spread operator.
+//     return num1
+// }
 
 // console.log(calculateCartPrice(200, 400, 600)) // it will only print 200 if in function ther will be no thhree ... dots like this(function calculateCartPrice(num1)), these three dot denotes rest operator.
 
 
-const user = {
-    username: "Rahul",
-    price: 999
-}
+// const user = {
+//     username: "Rahul",
+//     price: 999
+// }
 
-function handelObject(anyobject){
-    console.log(`Username is ${anyobject.username} and Price is ${anyobject.price}`)
-}
+// function handelObject(anyobject){
+//     console.log(`Username is ${anyobject.username} and Price is ${anyobject.price}`)
+// }
 
-// handelObject(user)
-handelObject({
-    username: "sam",
-    price: 1000
-})
+// // handelObject(user)
+// handelObject({
+//     username: "sam",
+//     price: 1000
+// })
 
-const myNewArray = [200, 400, 500, 1200]
+// const myNewArray = [200, 400, 500, 1200]
 
-function returnSecondValue(getArray){
-    return getArray[1]
-}
-console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 500, 2000]))
+// function returnSecondValue(getArray){
+//     return getArray[1]
+// }
+// console.log(returnSecondValue(myNewArray));
+// console.log(returnSecondValue([200, 500, 2000]))
