@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Owl Clicked !!!")
+    // }
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     // alert('owl clicked again')
+    //     console.log(e);
+    // }, false) // here false is Event Propogation and it's by default false
+
+    // Interview questions topic :- events or events type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, client position, clientX, clientY, screenX, screenY, 
+    // Keys :- altKey, ctrlKey, shiftKey, keyCode
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Clicked inside the ul");
+    // }, false) // here false is Event Propogation and it's by default false
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("Owl clicked");
+    // }, false) // here false is Event Propogation and it's by default false
+
+    // In above two functions difference dono me ye hai ki tm screen pr kahin bhi click kroge to 1st function hi chlega images vala chaye kisi bhi image pr click kro okay kyu sari image ul k andar means ul k andar li hai or li k andar images, "BUT" difference ye hai dono me ki  jb owl image jo second function hai us pr click krenge to pehle konsa run hoga ?  ye question hai ?, is ka answer hai pehle owl vala hi run hoga reason ye bubbling event hota hai means neeche se upr jo neeche event pehle milega vo pehle run hoga phir images vala. isi ko Event Propogation bolte hain.
+
+
+    // Capturing Event
+    // is event me bs hme false ko true kr dena hai.
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Clicked inside the ul");
+    // }, true) // here false is Event Propogation and it's by default false
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("Owl clicked");
+    // }, true)
+
+    // sb kuch same hai upr jo hmne false k liye function likha hai, difference srf ye hai ki is ko true kr dene se ye Capturing ho jata hai or Capturing upr se neeche jata hai to pehle ye images vala function run hoga then owl vala.
+
+    // or in dono sb function ko mila kr false or true vale function ko mila kar bolte hain bubbliing function.
+    // Capturing or Event propogation ka use task k hisab se hota hai.
+
+
+    // StopPropogation
+    // stopPropogation hota hai ab jb hm owl image pr click krenge to us k upr vala event call nhi hoga is ka yahi kaam hai.
+    // is ko interview me bolte hain ki ab apkan event bubble ho k upr nhi jyega.
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("Owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+
+    // preventDefault()
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation() // to stop bubbling means to stop calling above event ya upr jana hi rok dena event ka, Okay.
+    //     console.log("google clicked");
+    // }, false)
+
+
+
+    // Now performing some tasks.
+    // Task hide image when I click on it.
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e);
+        //console.log(e.target);
+        // above dono line me ye difference hai ki jo srf e likha hai vo event dega ki ye event prnjo e.target hai vo btayega kahan click kr rhe ho image pr ya li pr.
+
+        console.log(e.target.parentNode); // parentnode likhne se li mil gya, now ye hmne is liye lgaya hai taki hm image parent ka node target kr sake hain or image ko remove ya hide kr sake, ab hm jb image pr click krenege to srf li k image target krega ye.
+
+        if(e.target.tagName === 'IMG'){
+            
+            let removeit = e.target.parentNode // hmne parentNode se li ko target kiya
+            removeit.remove() // ye sb remove kr dega mtlb ye parentNode li ko remove kr dega or hmri image remove ho jyegi.
+
+        }
+
+        // 2nd way to do this.
+        // removeit.parentNode.removeChild(removeit) // idhr removeit.parentNode ka mtlb Ul hai mtlb ul mila or phir hmne likha removeChild(removeit) krdo mtlb removeChild li hai or remove kyan krna hai hmne let removeit me btaya hai ki li ko remove krdo.
+    }, false)
+</script>
+</html>
