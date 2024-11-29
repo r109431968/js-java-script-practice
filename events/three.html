@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur jS</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setInterval(function(){
+    //     console.log("Rahul", Date.now);
+
+    // }, 1000)
+
+    // 2nd way
+    // const sayDate = function(){
+    //     console.log("Rahul", Date.now);
+
+    // }
+    // setInterval(sayDate, 1000)
+    // setInterval(sayDate, 1000, "hi")
+    //const intervalId = setInterval(sayDate, 1000, "hi")
+    // clearInterval(intervalId)
+
+    // Task click on start button printing star, click on stop button printing stop.
+    // Function to handle Start button click
+
+    let intervalId;
+    document.querySelector("#start").addEventListener("click", function () {
+      // Clear any existing interval to prevent duplicates
+      clearInterval(intervalId);
+
+      // Start printing "Rahul" with a timestamp every second
+      intervalId = setInterval(function () {
+        console.log("Rahul", Date.now());
+      }, 1000);
+    });
+
+    // Function to handle Stop button click
+    document.querySelector("#stop").addEventListener("click", function () {
+      // Clear the interval and stop printing
+      clearInterval(intervalId);
+      console.log("Stopped");
+    });
+  </script>
+</html>
