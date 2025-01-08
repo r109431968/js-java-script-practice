@@ -7,7 +7,6 @@
 
 // console.log("Sum is:", Sum(33, 55));
 
-
 // 2. Write a JavaScript program to find the maximum number in an array.
 
 // const arr = [12, 33, 5, 56, 76, 8]
@@ -39,15 +38,13 @@
 
 // console.log(isPalindrome(user));
 
-
 // 4. Write a JavaScript program to reverse a given string.
-
 
 // let user = "Rahul"
 
 // function isReverse(str){
 //     let rev = ""
-    
+
 //     for(let i = str.length-1; i>=0; i--){
 //         rev += str[i];
 //     }
@@ -59,7 +56,6 @@
 
 // console.log(isReverse(user));
 
-
 //  5. Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
 
 //const arr = [55, 33, 5, 57, 7]
@@ -67,7 +63,7 @@
 
 // function isEvenarray(array){
 //     let evenarr = []
-    
+
 //     for(let i = 0; i <= array.length; i++){
 //         if(array[i] % 2 === 0){
 //             evenarr.push(array[i])
@@ -85,12 +81,10 @@
 
 // console.log(isEvenarray(arr));
 
-
-
 // 6. Write a JavaScript program to calculate the factorial of a given number.
 
 // function findFactorial(num){
-    
+
 //     if(num === 0 || num === 1){
 //         return 1;
 //     }
@@ -102,16 +96,14 @@
 // const fact = 5;
 // console.log(findFactorial(fact));
 
-
-
 // 7. Write a JavaScript function to check if a given number is prime.
 
 // function isPrime(num){
-    
+
 //     if(num <= 1){
 //         return `Is not a prime number ${num}`
 //     }
-    
+
 //     if(num === 2){
 //         return `Is prime number ${num}`
 //     }
@@ -149,7 +141,6 @@
 //     return largest;
 // }
 // console.log(getLargestEle(nestedArray))
-
 
 // 9. Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
 
@@ -288,7 +279,7 @@
 // function getFileExtension(){
 //     const filename = "exmpale.txt"
 //     const splitFile = filename.split(".").pop();
-    
+
 //     return `Your File Extension .${splitFile}`;
 // }
 // console.log(getFileExtension())
@@ -297,7 +288,7 @@
 // than 13 return double the absolute difference.
 
 // function differenceNumber(num){
-    
+
 //     if(num <= 13)
 //     {
 //         return 13 - num;
@@ -309,5 +300,358 @@
 // }
 // console.log(differenceNumber(20));
 
+// 20. Write a JavaScript program to compute the sum of the two given integers. If the two values are the same,
+// then return triple their sum.
+
+// function tripleifEqual(num1, num2){
+
+//     // if(num1 != num2)
+//     // {
+//     //     return num1 + num2
+//     // }
+//     // else
+//     // {
+//     //     return (num1 + num2) *  3
+//     // }
+//     return num1 != num2 ? num1 + num2 : (num1 + num2) * 3
+// }
+
+// console.log(tripleifEqual(7, 7));
+
+// 21. Write a JavaScript program to compute the absolute difference between a specified number and 19.
+// Returns triple the absolute difference if the specified number is greater than 19.
+
+// function differenceNumber(num){
+
+//     if(num < 19)
+//     {
+//         return 19 - num
+//     }
+//     else{
+//         return (num - 19) * 3
+//     }
+// }
+// console.log(differenceNumber(17));
+
+// 22. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or
+// if their sum is 50.
+
+// function checkFiftySum(num1, num2){
+
+//     if(num1 == 50 || num2 == 50)
+//     {
+//         return `${num1} or ${num2} one of the number is 50, So, it's ${true}`
+//     }
+
+//     var sum = num1 + num2
+//     if(sum == 50)
+//     {
+//         return `Sum of ${num1} and ${num2} is 50, So, it's ${true}`
+//     }
+//     else
+//     {
+//         return `Sum of ${num1} and ${num2} is ${num1 + num2}, So, it's ${false}`
+//     }
+// }
+
+// console.log(checkFiftySum(0, 50));
+
+// 23. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
+
+// function checkNumber(num){
+//     if(num >= 80 && num <= 120)
+//     {
+//         return `${num} Number is greater than 80 or equals or less than to 120, So, it's ${true}`
+//     }
+//     else if(num >= 380 && num <= 420)
+//     {
+//         return `${num} Number is greater than 380 or equals or less than to 420, So, it's ${true}`
+//     }
+//     else{
+//         return `${num} Number`
+//     }
+// }
+
+// console.log(checkNumber(70));
+
+// 24. Write a JavaScript program to create another string by adding "Py" in front of a given string.
+// If the given string begins with "Py" return the original string
+
+// var name = "Rahul"
+// // console.log(name.charAt(0));
+// // console.log(name[0]);
+
+// function stringMatch(str){
+
+//     // var p = str[0]
+//     // var y = str[1]
+
+//     // if(str[0] == "p" || str[0] == "P" && str[1] == "y" || str[1] == "Y")
+//     // {
+//     //     return `${str} and it's ${true}`
+//     // }
+//     // else{
+//     //     return `${str} has not PY in there starting ${false}`
+//     // }
+
+//     // return (str[0] == "p" || str[0] == "P" && str[1] == "y" || str[1] == "Y") ? `${str} and it's ${true}` :
+//     // `${str} has not PY in there starting, updated string is ${`Py${str}`} ${false}`
+
+//     // return (str[0] == "p" || str[0] == "P" && str[1] == "y" || str[1] == "Y") ? `${str} and it's ${true}` :
+//     // `${str} has not PY in there starting, updated string is Py${str} ${false}`
+// }
+// console.log(stringMatch("Rahul"));
+
+// 25. Write a JavaScript program to remove a character at the specified position in a given string and
+// return the modified string
+
+// var name = "Rahul";
+
+// function lfSwap(str) {
+//     if (str.length >= 1) {
+//         if (str.length === 1) {
+//             return str;
+//         }
+
+//         var f = str[0];
+//         var l = str[str.length - 1];
+//         var middle = str.slice(1, str.length - 1);
+//         console.log(middle);
+
+//         return l + middle + f;
+//     }
+
+//     return "String length must be greater than or equal to 1.";
+// }
+
+// console.log(lfSwap(name));
+
+// 26. Write a JavaScript program to create another string from a given string with the first character of the
+// given string added to the front and back.
+
+// function checkMultiple(num) {
+//     if (num % 3 === 0 || num % 7 === 0) {
+//         return `${num} is a multiple of 3 or 7.`;
+//     } else {
+//         return `${num} is not a multiple of 3 or 7.`;
+//     }
+// }
+
+// console.log(checkMultiple(21));
+// console.log(checkMultiple(10));
+
+// 27. Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.
+
+// function checkJava(str) {
+//     if (str.startsWith("Java")) {
+//         return "The string starts with 'Java'.";
+//     } else {
+//         return "The string does not start with 'Java'.";
+//     }
+// }
+
+// console.log(checkJava("JavaScript"));
+// console.log(checkJava("Python"));
+
+// function checkJava(str) {
+//     if (str.substring(0, 4) === "Java") {
+//         return "The string starts with 'Java'.";
+//     } else {
+//         return "The string does not start with 'Java'.";
+//     }
+// }
+
+// console.log(checkJava("JavaScript"));
+// console.log(checkJava("Python"));
+
+// 28. Write a JavaScript program to find the largest of three given integers.
+
+// function FindlargestNum(num){
+//     var largeNum = num[0]
+
+//     for(let i = 1; i < num.length; i++){
+//         if(num[i] > largeNum){
+//             largeNum = num[i]
+//         }
+//     }
+
+//     return largeNum;
+// }
+
+// console.log(FindlargestNum([5, 9, 3]));
+
+// function FindlargestNum(x, y, z) {
+//     maxval = 0;
+    
+//     if (x > y) {
+//         maxval = x;
+//     } else {
+//         maxval = y;
+//     }
+    
+//     if (z > maxval) {
+//         maxval = z;
+//     }
+//     return maxval;
+// }
+
+// console.log(FindlargestNum(9, 7, 4));
+
+// 29. Write a JavaScript program to find the closest value to 100 from two numerical values.
+// function findClosestNum(num1, num2){
+    
+//     if(num1 < 0  || num2 < 0)
+//     {
+//         return `${num1} or ${num2} on of the number is Negative, Pass Positive Number`
+//     }
+//     var first = 100 - num1;
+//     var sec = 100 - num2;
+    // return first > sec ? `${num2} is close to the 100.` : `${num1} is close to the 100.`
+
+    // if (first < 0 || sec < 0) {
+    //     return "Answer is coming; it's negative.";
+    // }
+
+//     if (first === sec) {
+//         return "Answer is equal.";
+//     }
+
+//     if (first < 0 && Math.abs(first) < Math.abs(sec)) {
+//         return "First is closer to 100.";
+//     }
+//     if (sec < 0 && Math.abs(sec) < Math.abs(first)) {
+//         return "Second is closer to 100.";
+//     }
+
+//     if(first > sec){
+//         return `${num2} is close to the 100.`
+//     }
+//     else{
+//         return `${num1} is close to the 100.`
+//     }
+// }
+
+// console.log(findClosestNum(90, 110));
 
 
+// 30. Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string.
+
+// function checkCharacterInRange(str, char) {
+//     if (str.length < 4) {
+//         return "String is too short to check the range.";
+//     }
+    
+//     const substring = str.slice(1, 4);
+
+//     return substring.includes(char);
+// }
+
+// console.log(checkCharacterInRange("Hello", "e"));
+// console.log(checkCharacterInRange("Hello", "o"));
+// console.log(checkCharacterInRange("abcdef", "d"));
+// console.log(checkCharacterInRange("Hi", "i"));
+
+
+// function checkChar(str1, char){
+//     let ctr = 0;
+//     for(let i = 0; i < str1.length; i++)
+//     {
+//         if((str1.charAt(i) == char) && (i >= 1 && i <= 3))
+//         {
+//             ctr = 1
+//             break;
+//         }
+//     }
+
+//     if(ctr == 1)
+//         return true;
+
+//     return false;
+// }
+
+// console.log(checkChar("Python", "y"));
+
+// console.log(checkChar("JavaScript", "a"));
+
+// console.log(checkChar("Console", "o"));
+
+// console.log(checkChar("Console", "C"));
+
+// console.log(checkChar("Console", "e"));
+
+// console.log(checkChar("JavaScript", "S"));
+
+// 31. Write a JavaScript program that checks whether the last digit of three positive integers is the same.
+
+// function findPositiveInt(num1, num2, num3){
+
+//     if(num1 % 10 === num2 % 10 && num2 % 10 === num3 % 10)
+//     {
+//         return `${num1}, ${num2}, ${num3} are same ${true}.`
+//     }
+//     else{
+//         return `${num1}, ${num2}, ${num3} are not same ${false}.`
+//     }
+// }
+
+// console.log(findPositiveInt(27, 37, 57));
+// console.log(findPositiveInt(123, 456, 789));
+
+// 32. Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given
+// string. If the string length is less than 3 convert all the characters to upper case.
+
+// function strCheck(str){
+//     //return str[0]
+    
+//     if(str.length < 3)
+//     {
+//         return "String length is less than three(3) " + str.toUpperCase()
+//     }
+//     else{
+
+//         var length = str.length
+//         var char = str.slice(0, 3)
+//         var char2 = str.slice(3)
+//         //console.log("Char:",char2);
+        
+//         return char.toLowerCase() + char2
+//     }
+// }
+
+// console.log(strCheck("JAVASCRIPT"));
+
+
+// 33. Write a JavaScript program to evaluate a student's total marks across various examinations and determine their 
+// grade. The grading criteria are as follows:
+
+// 1. If the total marks fall within the range of 89 to 100 (inclusive), the student receives an A+ grade.
+// 2. If the examination is labeled as "Final-exam," the student will receive an A+ grade only if their total marks 
+//    are 90 or greater. Assume that final examination means we pass 'true' as second parameter otherwise blank.
+// 3. If the student achieves an A+ grade, the program should return 'true'; otherwise, it should return 'false'.
+
+// function FindGrade(totalMarks, isFinalExam = false){
+    
+//     if(isFinalExam == false){
+//         console.log("It's a Regular Exam");
+//         if(totalMarks >= 89 && totalMarks <= 100 ){
+//             return `Student get ${totalMarks} and Grade A+ ` + true
+//         }
+//         else{
+//             return `Student get ${totalMarks} and failed the Exam. ` + false
+//         }
+//     }
+//     else{
+//         console.log("It's a Final Exam");
+//         if(totalMarks >= 90 && totalMarks <= 100 ){
+//             return `Student get ${totalMarks} and Passed the final exam, Grade A+ ` + true
+//         }
+//         else{
+//             return `Student get ${totalMarks} and Failed the final exam, ` + false
+//         }
+//     }
+// }
+
+// console.log(FindGrade(90));
+
+
+// 34. 
