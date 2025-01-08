@@ -654,4 +654,99 @@
 // console.log(FindGrade(90));
 
 
-// 34. 
+// 34. Write a JavaScript program to reverse a given string.
+
+// function revStr(str){
+    
+//     return str.split("").reverse().join("")
+// }
+
+// console.log(revStr("Rahul"));
+
+
+// 35. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
+
+// function replaceStr(str){
+
+//     let result = ""
+
+//     for(i = 0; i < str.length; i++){
+//         //console.log(str.charCodeAt(i));
+//         let charAscii = str.charCodeAt(i)
+//         //console.log("Char Ascii", charAscii);
+        
+//         let nextAsciiVal = charAscii + 1;
+//         //console.log("Next Ascii", nextAsciiVal);
+
+//         //return (String.fromCharCode(nextAsciiVal))
+//         //result += String.fromCharCode(nextAsciiVal)
+
+//         if (charAscii === 122) {
+//             result += 'a';
+//         }else if (charAscii === 90) {
+//             result += 'A';
+//         } else {
+//             result += String.fromCharCode(charAscii + 1);
+//         }
+        
+//     }
+//     return result;
+    
+// }
+
+// console.log(replaceStr("Rahul"));
+
+// const name = "Rahul"
+// var afterR = String.fromCharCode(83);
+// console.log("After R :",afterR);
+
+
+// 36. Write a JavaScript program to capitalize the first letter of each word in a given string
+// function capitalLet(str){
+
+//     let char = str[0].toUpperCase()
+//     //let fulstr = char + str.slice(1)
+//     return char + str.slice(1)
+// }
+
+// console.log(capitalLet("rahul"));
+
+
+// 37. Write a JavaScript application that transforms a provided numerical value into hours and minutes
+
+// function Time(num){
+//     let hour = Math.floor(num/60)
+//     let minutes = num % 60
+//     return hour + ":" + minutes
+// }
+
+// console.log(Time(1441));\
+
+// 38. Write a JavaScript program to convert letters of a given string alphabetically
+
+// function Alpha(str){
+//     let cnvt = str.split("").sort().join("")
+//     return cnvt;
+// }
+
+// console.log(Alpha("javascript"));
+
+
+// 39. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places 
+//      anywhere (at least once) in a given string
+
+function checkChar(str){
+
+    let result = ""
+    for(let i = 0; i < str.length; i++){
+        console.log(str[i]);
+        if(str[i] === "a" || str[i] === "A")
+            result += str + true
+        else
+            result += str + false
+    }
+    return result;
+}
+
+console.log(checkChar("Rahul"));
+
