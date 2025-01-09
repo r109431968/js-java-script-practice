@@ -963,3 +963,164 @@
 // console.log(strConcat("Hello", "World"));
 
 // console.log(strConcat("Rahul", "Tiwari"));
+
+
+// 51. Write a JavaScript program to test whether a string ends with "Script". 
+//      The string length must be greater than or equal to 6.
+
+// function check(str){
+
+//     let match = "SCRIPT"
+//     let lower = match.toLowerCase()
+//     let str2 = str.toLowerCase()
+//     if(str2.length <= 6){
+//         return false + ", The string length must be greater than or equal to 6."
+//     }
+//     //console.log(str2 + " : " + lower);
+//     if(str2.slice(str2.length - 6) === lower){
+//         return true + " : " + str2
+//     }
+// }
+
+// console.log(check("Rahul"));
+
+
+// 52. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.
+
+//const arr = [22, 45, 67]
+// function Sum_Arr(arr){
+//     let sum = 0
+//     if(Array.isArray(arr)){
+//         for(let i = 0; i < arr.length; i++){
+//             sum += arr[i]
+//         }
+//     }
+
+//     return sum;
+// }
+
+// const arr2 = [22, 45, 67]
+// console.log(Sum_Arr(arr2));
+
+
+// 53. Write a JavaScript program to rotate the elements left in a given array of integers of length 3.
+
+// function Rot_Arr(arr){
+//     if(arr.length !== 3){
+//         return false + ", Array length must be 3."
+//     }
+
+//     //return [arr[1], arr[2], arr[0]]
+
+//     let result = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         result.push(arr[(i + 1) % arr.length]);
+//     }
+    
+// }
+// const arr2 = [22, 45, 67]
+// console.log(Rot_Arr(arr2));
+
+
+// 54. Write a JavaScript program to check whether 1 appears in the first or last position of a given 
+//      array of integers. The array length must be larger than or equal to 1
+
+// function ElementCheck(arr){
+//     if(arr.length < 1){
+//         return "Array length must be 1."
+//     }
+
+//     // if(arr[0] === 1){
+//     //     return true;
+//     // }
+//     // else if(arr[arr.length - 1] === 1){
+//     //     return true
+//     // }else{
+//     //     return false
+//     // }
+
+//     return (arr[0] === 1 || arr[arr.length - 1] === 1) ? true : false
+// }
+
+// const arr2 = [2, 3, 1]
+// console.log(ElementCheck(arr2));
+
+
+// 55. Write a JavaScript program to check whether the first and last elements are the same in a 
+//      given array of integers of length 3
+
+// function Element_Same(arr){
+//     if(arr[0] === arr[arr.length - 1]){
+//         return true + `, Both Elements are same ${arr[0]} and ${arr[arr.length - 1]}`
+//     }
+
+//     return false + `, Elements are not same ${arr[0]} and ${arr[arr.length - 1]}`
+// }
+// const arr2 = [878, 323, 22656]
+// console.log(Element_Same(arr2));
+
+
+// 56. Write a JavaScript program to reverse the elements of a given array of integers of length 3.
+
+// function Rev_arr(arr){
+//     if(arr.length !== 3){
+//         return false + `, Array length is not Three, ${arr.length - 1}`
+//     }
+
+//     let new_arr = []
+//     for(let i = 0; i < arr.length; i++){
+//         console.log(arr[i]);
+        
+//         new_arr.unshift(arr[i])
+//     }
+
+//     return true + ", " + [new_arr]
+// } 
+// const arr2 = [87,65,9]
+// console.log(Rev_arr(arr2));
+
+// 57. Write a JavaScript program to find the largest value between the first and last elements and set all the
+//      other elements to that value. Display the updated array
+
+// function largeEle(arr){
+//     if(arr.length === 1){
+//         return arr[0] + " ," + false
+//     }
+
+//     let new_arr = []
+//     if(arr[0] > arr[arr.length - 1]){
+//         for(let i = 0; i < arr.length; i++){
+//             new_arr.push(arr[0]) 
+//         }
+//     }
+//     else if(arr[0] < arr[arr.length - 1]){
+//         for(let i = 0; i < arr.length; i++){
+//             new_arr.push(arr[arr.length - 1]) 
+//         }
+//     }
+//     else {
+//         return false
+//     }
+
+//     return new_arr
+// }
+// const arr2 = [87, 598, 98]
+// console.log(largeEle(arr2));
+
+
+// 58. Write a JavaScript program to add two digits to a given positive integer of length two.
+function addDigits(num) {
+    if (num >= 10 && num <= 99) {
+        let tens = Math.floor(num / 10);
+        let ones = num % 10;
+
+        return tens + ones;
+    } else {
+        return "Please provide a two-digit positive integer.";
+    }
+}
+
+console.log(addDigits(56));
+console.log(addDigits(99));
+console.log(addDigits(8));
