@@ -1,0 +1,58 @@
+{
+    "students": [
+    {
+        "rollno": 13,
+        "name": "rajesh",
+        "city": "bihar",
+        "fees": 3453
+    },
+    {
+        "rollno": 15,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    },  
+    {   
+        "rollno": 17,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    },  
+    {   
+        "rollno": 16,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    },  
+    {   
+        "rollno": 12,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    },  
+    {   
+        "rollno": 16,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    },  
+    {   
+        "rollno": 18,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    },  
+    {   
+        "rollno": 19,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    },  
+    {   
+        "rollno": 20,
+        "name": "rajesh",
+        "city": "Bihar",
+        "fee": 3453
+    }
+]
+}

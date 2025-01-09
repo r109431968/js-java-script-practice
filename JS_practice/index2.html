@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <script>
+        function mydisplay() {
+            fetch("http://localhost:3000/students")
+                .then(response => response.json())
+                .then(myData => {
+                    let Table = `<table border="1">
+                                    <tr>
+                                        <th>Roll No</th>
+                                        <th>Name</th>
+                                        <th>City</th>
+                                        <th>Fees</th>
+                                    </tr>`;
+                    myData.map((key) => {
+                        Table += `<tr>
+                                    <td>${key.rollno}</td>
+                                    <td>${key.name}</td>
+                                    <td>${key.city}</td>
+                                    <td>${key.fee}</td>
+                                </tr>`;
+                    });
+
+                    Table += `</table>`;
+                    document.getElementById("demo").innerHTML = Table;
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="mydisplay()">Show Data</button>
+    <div id="demo"></div>
+</body>
+</html>
