@@ -735,18 +735,231 @@
 // 39. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places 
 //      anywhere (at least once) in a given string
 
-function checkChar(str){
+// function checkChar(str) {
+//     for (let i = 0; i < str.length - 3; i++) {
+//         console.log(str[i]);
+        
+//         if ((str[i] === 'a' && str[i + 3] === 'b') || (str[i] === 'b' && str[i + 3] === 'a')) {
+//             return true;
+//         }
+//     }
+//     return false;
 
-    let result = ""
-    for(let i = 0; i < str.length; i++){
-        console.log(str[i]);
-        if(str[i] === "a" || str[i] === "A")
-            result += str + true
-        else
-            result += str + false
-    }
-    return result;
-}
+//     //return (/a...b/).test(str) || (/b...a/).test(str);
+// }
 
-console.log(checkChar("Rahul"));
+// // console.log(checkChar("Rahul"));
+// // console.log(checkChar("Test"));
+// console.log(checkChar("Chainsbreak"));
 
+
+// 40. Write a JavaScript program to count the number of vowels in a given string.
+
+// function vowelCheck(str){
+    
+//     // let count = 0
+//     // let lower = str.toLowerCase()
+//     // for(let i = 0; i < str.length; i++){
+//     //     if(lower[i] === "a" || lower[i] === "e" || lower[i] === "i" || lower[i] === "o" || lower[i] === "u"){
+//     //         count++
+//     //     }
+//     // }
+//     // return count;
+
+//     // let count = 0
+//     // const vowels = "aeiou"
+//     // let lower = str.toLowerCase()
+//     // for (let char of lower) {
+//     //     if (vowels.includes(char)) {
+//     //         count++;
+//     //     }
+//     // }
+
+//     // return count;
+// }
+
+// console.log(vowelCheck("RAhul"));
+
+
+// 41. Write a JavaScript program to check whether a given string contains an equal number of p's and t's
+
+// function ptCount(str){
+
+//     let countP = 0
+//     const checkP = "p"
+//     let lowerp = str.toLowerCase()
+//     for (let char of lowerp) {
+//         //console.log("char", char);
+//         //console.log("lower", lowerp);
+        
+//         if (checkP.includes(char)) {
+//             countP++;
+//         }
+//     }
+
+//     let countT = 0
+//     const checkT = "t"
+//     let lowert = str.toLowerCase()
+//     for (let char of lowert) {
+//         if (checkT.includes(char)) {
+//             countT++;
+//         }
+//     }
+
+//     return `Count P is : ${countP} and Count T is : ${countT}`;
+// }
+
+// console.log(ptCount("Satyam"));
+// console.log(ptCount("Pantty"));
+// console.log(ptCount("Tarun"));
+
+// 42. Write a JavaScript program to divide two positive numbers and return the result as string with 
+//      properly formatted commas.
+
+
+// 43. Write a JavaScript program to create one string of specified copies (positive numbers) of a given string
+
+// function repeatString(str, num = 3) {
+//     if (num < 1) {
+//         return "";
+//     }
+//     let result = "";
+//     for (let i = 0; i < num; i++) {
+//         result += str;
+//     }
+//     return result;
+// }
+
+// console.log(repeatString("hello"));
+
+// 44. Write a JavaScript program to create an updated string of 4 copies of the last 3 characters of a 
+//      given original string. The string length must be 3 and above.
+
+// function LastRepeatStr(str, num = 3){
+
+//     if(str.length < 3){
+//         return false + `, String length is ${str.length}, it must be Greater or Equal to Three(3).`
+//     }
+
+//     let result = ""
+//     if(str.length >= 3)
+//     {
+//         let len = str.slice(str.length - 3)
+//         console.log(len);
+//         for (let i = 0; i < num; i++)
+//         {
+//             result += len
+//         }
+        
+//     }
+//     return result + `, String length is ${str.length}.`
+// }
+
+// console.log(LastRepeatStr("Rahul Tiwari"));
+
+
+// const str = "Rahul"
+// let len = str.slice(str.length - 3)
+// console.log(len);
+
+
+// 45. Write a JavaScript program to extract the first half of a even string.
+
+// function EvenStr(str){
+
+//     if(str.length % 2 === 0){
+//         let FirstHalf = str.length / 2
+//         let result = "";
+//         for(let i = 0; i < FirstHalf; i++){
+//             //console.log(str[i]);
+//             result += str[i]
+            
+//         }
+//         return true + `, String length is ${str.length}, result is ${result} `
+//     }
+
+//     return false + `, String length is ${str.length}`
+// }
+
+// console.log(EvenStr("JavaScript"));
+
+// 46. Write a JavaScript program to create a new string without the first and last characters of a given string
+
+// function NewStr(str){
+
+//     let f = str[0];
+//     let l = str[str.length - 1];
+//     let middle = str.slice(1, str.length - 1);
+//     //console.log(middle);
+//     return middle
+// }
+
+// console.log(NewStr("Rahul"));
+
+// 47. Write a JavaScript program to concatenate two strings except for their first character.
+
+// function ConcatStr(str1, str2){
+//     let str1_concat = str1.slice(1) 
+//     let str2_concat = str2.slice(1) 
+//     return str1_concat + str2_concat
+// }
+
+// console.log(ConcatStr("Rahul", "Tiwari"));
+
+
+// 48. Write a JavaScript program to move the last three characters to the start of a given string. 
+//      The string length must be greater than or equal to three
+
+// function updateStr(str){
+
+//     if(str.length >= 3){
+//         let len1 = str.slice(0, str.length - 3)
+//         let len2 = str.slice(str.length - 3)
+//         return len2 + len1
+//     }
+
+//     return false
+// }
+
+// console.log(updateStr("hello"));
+
+
+// 49. Write a JavaScript program to create a string using the middle three characters of a 
+//      given string of odd length. The string length must be greater than or equal to three.
+
+// function oodStr(str){
+//     if(str.length % 2 === 0){
+//         return false;
+//     }
+
+//     let halfLen = Math.floor(str.length / 2)
+//     //console.log(halfLen);
+//     //let strInd = str[halfLen]
+//     //console.log(str[halfLen]);
+//     let f  = str[halfLen-1]
+//     let m = str[halfLen]
+//     let l = str[halfLen + 1]
+//     console.log(f + m + l);
+    
+    
+//     return true + `, It's odd ${str.length} length string.`
+// }
+// console.log(oodStr("Rahul"));
+
+// 50. Write a JavaScript program to concatenate two strings and return the result. If the length of the strings 
+//      does not match, then remove the characters from the longer string.
+
+// function strConcat(str1, str2) {
+//     if (str1.length !== str2.length) {
+//         if (str1.length > str2.length) {
+//         str1 = str1.substring(0, str2.length);
+//     } else {
+//         str2 = str2.substring(0, str1.length);
+//     }
+//     }
+//     return str1 + str2;
+// }
+
+// console.log(strConcat("Hello", "World"));
+
+// console.log(strConcat("Rahul", "Tiwari"));
