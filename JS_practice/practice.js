@@ -1110,17 +1110,17 @@
 
 
 // 58. Write a JavaScript program to add two digits to a given positive integer of length two.
-function addDigits(num) {
-    if (num >= 10 && num <= 99) {
-        let tens = Math.floor(num / 10);
-        let ones = num % 10;
+// function addDigits(num) {
+//     if (num >= 10 && num <= 99) {
+//         let tens = Math.floor(num / 10);
+//         let ones = num % 10;
 
-        return tens + ones;
-    } else {
-        return "Please provide a two-digit positive integer.";
-    }
-}
+//         return tens + ones;
+//     } else {
+//         return "Please provide a two-digit positive integer.";
+//     }
+// }
 
-console.log(addDigits(56));
-console.log(addDigits(99));
-console.log(addDigits(8));
+// console.log(addDigits(56));
+// console.log(addDigits(99));
+// console.log(addDigits(8));
