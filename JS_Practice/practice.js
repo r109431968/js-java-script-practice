@@ -664,7 +664,8 @@
 // console.log(revStr("Rahul"));
 
 
-// 35. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
+// 35. Write a JavaScript program to replace every character in a given string with the character 
+//      following it in the alphabet.
 
 // function replaceStr(str){
 
@@ -817,7 +818,8 @@
 //      properly formatted commas.
 
 
-// 43. Write a JavaScript program to create one string of specified copies (positive numbers) of a given string
+// 43. Write a JavaScript program to create one string of specified copies (positive numbers) of a 
+//      given string
 
 // function repeatString(str, num = 3) {
 //     if (num < 1) {
@@ -1110,17 +1112,255 @@
 
 
 // 58. Write a JavaScript program to add two digits to a given positive integer of length two.
-function addDigits(num) {
-    if (num >= 10 && num <= 99) {
-        let tens = Math.floor(num / 10);
-        let ones = num % 10;
+// function addDigits(num) {
+//     if (num >= 10 && num <= 99) {
+//         let tens = Math.floor(num / 10);
+//         let ones = num % 10;
 
-        return tens + ones;
-    } else {
-        return "Please provide a two-digit positive integer.";
-    }
-}
+//         return tens + ones;
+//     } else {
+//         return "Please provide a two-digit positive integer.";
+//     }
+// }
 
-console.log(addDigits(56));
-console.log(addDigits(99));
-console.log(addDigits(8));
+// console.log(addDigits(56));
+// console.log(addDigits(99));
+// console.log(addDigits(8));
+
+// 59. Write a JavaScript program to add two positive integers without carrying.
+
+// function addWithoutCarrying(num1, num2) {
+//     let result = 0;
+//     let placeValue = 1;
+
+//     while (num1 > 0 || num2 > 0) {
+//         console.log("first: ", num1);
+//         console.log("second: ", num2);
+
+//         const digit1 = num1 % 10;
+//         const digit2 = num2 % 10;
+//         console.log("digit1: ", digit1);
+//         console.log("digit2: ", digit2);
+
+//         const sum = (digit1 + digit2) % 10;
+//         console.log("Sum: ", sum);
+
+//         result += sum * placeValue;
+//         console.log("sum * placeValue",sum * placeValue);
+//         console.log("Result: ", result);
+
+//         num1 = Math.floor(num1 / 10);
+//         num2 = Math.floor(num2 / 10);
+//         console.log("num1: ", num1);
+//         console.log("num2: ", num2);
+
+//         placeValue *= 10;
+//     }
+
+//     return result;
+// }
+
+// console.log(addWithoutCarrying(456, 173));
+// console.log(addWithoutCarrying(999, 111));
+// console.log(addWithoutCarrying(123, 456));
+
+
+// 60. Write a JavaScript program to find the longest string from a given array of strings.
+
+// function longestString(arr) {
+//     let longest = "";
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i].length > longest.length) {
+
+//             console.log("arrayLength ", arr[i].length);
+//             console.log("findArrayLength ",longest.length);
+
+//             longest = arr[i];
+//             console.log("Longest Array ",longest);
+
+//         }
+//     }
+//     console.log("Result ",longest);
+
+//     return longest;
+// }
+
+// console.log(longestString(["Rahul", "Tiwari", "Satyam"]));
+
+
+// 61. Write a JavaScript program to replace each character in a given string with the next in the English 
+//      alphabet.  Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+
+// function replaceStr(str){
+//     let result = ""
+//     for(let i = 0; i < str.length; i++){
+//         let charAscii = str.charCodeAt(i)
+//         let nextChar = charAscii + 1
+//         console.log(nextChar);
+
+//         if (charAscii === 122) {
+//             result += 'a';
+//         }else if (charAscii === 90) {
+//             result += 'A';
+//         } else {
+//             result += String.fromCharCode(charAscii + 1);
+//         }
+
+//     }
+//     return result;
+// }
+
+// console.log(replaceStr("Tiwari"));
+
+
+// 62. Write a JavaScript program to divide a given array of positive integers into two parts. 
+//      First element belongs to the first part, second element belongs to the second part, and third 
+//      element belongs to the first part and so on. Now compute the sum of two parts and store it in an 
+//      array of size two.
+
+// function IndexaddArray(arr){
+
+//     let evenarr = 0
+//     let oddarr = 0
+
+//     if(arr.length <= 2 )
+//     {
+//         return arr + ` Array length must be greater than two, Array length is ${arr.length}`
+//     }
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 === 0){
+//             evenarr += arr[i]
+//             //console.log("even ",evenarr);
+//         }
+//         else{
+//             oddarr += arr[i]
+//             //console.log("odd ", oddarr);
+
+//         }
+//     }
+//     return `[ ${evenarr} , ${oddarr} ]`
+// }
+// console.log(IndexaddArray([21, 44, 7]));
+
+
+// 63. Write a JavaScript program to determine if two arrays of integers of the same length are similar. 
+//      The arrays will be similar if one array can be obtained from another array by swapping at most one 
+//      pair of elements.
+
+// function areArrayIndexSimilar(arr1, arr2) {
+//     let newarr = [];
+
+//     for (let i = 0; i < arr1.length; i++) {
+//         let matchFound = false;
+
+//         for (let j = 0; j < arr2.length; j++) {
+//             if (arr1[i] === arr2[j]) {
+//                 newarr.push(arr1[i]);
+//                 matchFound = true;
+//                 break;
+//             }
+//         }
+
+//         if (!matchFound) {
+//             console.log("Unmatched element in arr1:", arr1[i]);
+//         }
+//     }
+
+//     console.log("Matched elements:", newarr);
+// }
+
+
+// function areArrayIndexSimilar(arr1, arr2){
+
+//     let newarr = []
+//     for(let i = 0; i < arr1.length; i++){
+
+//         if(arr2.includes(arr1[i])){
+//             newarr.push(arr1[i])
+//         }
+//         else{
+//             `${arr1} and ${arr2} are Mismatched.`
+//         }
+//     }
+//     return newarr
+// }
+
+// console.log(areArrayIndexSimilar([22, 44, 66,], [22, 45, 68]));
+
+
+// 64. Write a JavaScript program that takes two integers and a divisor. If the given divisor divides 
+//      both integers and does not divide either, two specified integers are similar. Check whether two 
+//      integers are similar or not
+
+// function  CheckSimilarity(num1, num2, num3){
+//     let add = num1 + num2
+//     let sub = num1 - num2
+//     let div = num1 / num2
+//     let mult = num1 * num2
+
+//     if(num3 === add){
+//         return true + `, Operator Add(+) work ${num3}`
+//     }
+
+//     if(num3 === sub){
+//         return true + `, Operator Sub(-) work ${num3}`
+//     }
+
+//     if(num3 === div){
+//         return true + `, Operator Div(/) work ${num3}`
+//     }
+
+//     if(num3 === mult){
+//         return true + `, Operator Mult(*) work ${num3}`
+//     }
+// }
+
+// console.log(CheckSimilarity(15, 3, 5));
+
+
+// 65. Write a JavaScript program to find the kth greatest element in a given array of integers.
+
+// function kthGreatestElement(arr, k) {
+//     if (k <= 0 || k > arr.length) {
+//         return "Invalid value of k";
+//     }
+
+//     let result;
+
+//     for (let i = 0; i < k; i++) {
+//         let largest = arr[0];
+
+//         for (let j = 1; j < arr.length; j++) {
+//             if (arr[j] > largest) {
+//                 largest = arr[j];
+//             }
+//         }
+
+//         result = largest;
+
+//         const index = arr.indexOf(largest);
+//         console.log("large, ", arr.splice(index, 1))
+//     }
+
+//     return result;
+// }
+
+// console.log(kthGreatestElement([87, 9, 98, 8], 1));
+// console.log(kthGreatestElement([87, 9, 98, 8], 2));
+// console.log(kthGreatestElement([87, 9, 98, 8], 3));
+
+
+// function kthGreatestElement(arr, k) {
+//     arr.sort((a, b) => b - a);
+
+//     if (k <= 0 || k > arr.length) {
+//         return "Invalid value of k";
+//     }
+
+//     return arr[k - 1];
+// }
+
+// console.log(kthGreatestElement([87, 9, 98, 8], 1));
+// console.log(kthGreatestElement([87, 9, 98, 8], 2));
+// console.log(kthGreatestElement([87, 9, 98, 8], 3));
+
