@@ -815,7 +815,7 @@
 // console.log(ptCount("Tarun"));
 
 // 42. Write a JavaScript program to divide two positive numbers and return the result as string with 
-//      properly formatted commas.
+//      properly formatted commas. (doubt)
 
 
 // 43. Write a JavaScript program to create one string of specified copies (positive numbers) of a 
@@ -1073,7 +1073,7 @@
 //     let new_arr = []
 //     for(let i = 0; i < arr.length; i++){
 //         console.log(arr[i]);
-        
+
 //         new_arr.unshift(arr[i])
 //     }
 
@@ -1363,4 +1363,98 @@
 // console.log(kthGreatestElement([87, 9, 98, 8], 1));
 // console.log(kthGreatestElement([87, 9, 98, 8], 2));
 // console.log(kthGreatestElement([87, 9, 98, 8], 3));
+
+
+// 66. Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers 
+//      (numbers that follow each other in order) in a given array of positive integers. (doubt)
+
+// function maxArrDif(arr){
+
+//     let maxDiff = 0
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         let diff = Math.abs(arr[i] - arr[i + 1]);
+//         console.log(`Difference between arr[${i}] and arr[${i + 1}]: ${diff}`);
+//         if (diff > maxDiff) {
+//             maxDiff = diff; 
+//         }
+//     }
+//     return maxDiff
+// }
+// console.log(maxArrDif([2, 9, 3, 15, 8]));
+
+// 67. Write a JavaScript program to find the maximum difference among all possible pairs of a given 
+//      array of integers
+
+// function MaxMinArr(arr){
+//     let maxx =  Math.max(...arr)
+//     let min = Math.min(...arr)
+//     return maxx - min
+// }
+// console.log(MaxMinArr([44, 98, 55]));
+
+// 68. Write a JavaScript program to find the number appearing most frequently in a given array of integers. (doubt)
+
+// 69. Write a JavaScript program to replace all numbers with a specified number in an array of integers
+
+// function RemoveEle(arr, k){
+//     return arr.splice(1, k)
+// }
+
+// console.log(RemoveEle([4, 2, 4, 6, 2, 4, 6, 6, 6], 7));
+
+
+// 70. Write a JavaScript program to compute the sum of the absolute differences of consecutive 
+//      numbers in a given array of integers
+
+// function maxArrDifAdd(arr){
+
+//     let count = 0
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         let diff = Math.abs(arr[i] - arr[i + 1]);
+//         count += diff
+//     }
+//     return count
+// }
+// console.log(maxArrDifAdd([2, 9, 3, 15, 8]));
+
+// 71. Write a JavaScript program to find the shortest possible string. This can be converted into a 
+//      string and converted into a palindrome by adding characters to the end of it. (doubt)
+
+// 72. Write a JavaScript program to check whether it is possible to rearrange the characters of a 
+//      given string. This is in such a way that it will become equal to another given string.
+
+// function canRearrangeToEqual(str1, str2){
+//     if(str1.length !== str2.length){
+//         return `${str1} ${str2} length is difference.`
+//     }
+
+//     let sortstr1 = str1.split('').sort().join('')
+//     console.log(sortstr1);
+//     let sortstr2 = str2.split('').sort().join('')
+//     console.log(sortstr2);
+
+//     return sortstr1 === sortstr2
+// }
+
+// console.log(canRearrangeToEqual("listen", "silent"))
+// console.log(canRearrangeToEqual("triangle", "integral"));
+// console.log(canRearrangeToEqual("apple", "pale"));
+
+// 73. Write a JavaScript program to check if there is at least one element in two given sorted arrays of
+//      integers.
+
+function SameEle(arr1, arr2){
+
+    for(let i = 0; i < arr1.length; i++){
+        for(let j = 0; j < arr2.length; j++){
+            if(arr1[i] === arr2[j]){
+                return `${arr1[i]} and ${arr2[j]} are same element.`
+            }
+        }
+    }
+
+    return false + " : " + arr1 + " : " + arr2
+}
+console.log(SameEle( [1, 2, 4, 6], [2, 5, 6, 8]));
+console.log(SameEle( [1, 3, 5], [2, 4, 6]));
 

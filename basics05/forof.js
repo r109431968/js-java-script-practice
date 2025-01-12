@@ -44,7 +44,8 @@ const arr = [1, 2, 3, 4, 5]
 //     console.log(key, '-', value);    // It change into iterate.   
 // }
 
-// Object can not iterate but above we can see MAP can be iterate or MAP bhi key value pair or bject bhi key value pair hai.
+// Object can not iterate but above we can see MAP can be iterate or MAP bhi key value pair or object bhi key 
+// value pair hai.
 // const myObject = {
 //     'game1': 'NFS',
 //     'geme2': 'Spiderman'
