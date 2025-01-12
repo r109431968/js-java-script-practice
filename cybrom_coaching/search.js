@@ -36,7 +36,7 @@ document.getElementById("search-btn").addEventListener("click", function() {
             table.border = "1";
 
             const headerRow = table.insertRow();
-            ["ID", "Name", "City", "Fees"].forEach(header => {
+            ["Name", "City", "Fees"].forEach(header => {
                 const th = document.createElement("th");
                 th.textContent = header;
                 headerRow.appendChild(th);
@@ -44,10 +44,10 @@ document.getElementById("search-btn").addEventListener("click", function() {
 
             filteredStudents.forEach(student => {
                 const row = table.insertRow();
-                row.insertCell(0).textContent = student.id;
-                row.insertCell(1).textContent = student.name;
-                row.insertCell(2).textContent = student.city;
-                row.insertCell(3).textContent = student.fee;
+                //row.insertCell(0).textContent = student.id;
+                row.insertCell(0).textContent = student.name;
+                row.insertCell(1).textContent = student.city;
+                row.insertCell(2).textContent = student.fee;
             });
 
             studentList.appendChild(table);
