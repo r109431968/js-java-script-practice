@@ -9,7 +9,7 @@
     <a href="./index.html">Home</a> &nbsp;
     <a href="./addstudents.html">Insert</a> &nbsp;
     <a href="#" id="display-link">Display</a>&nbsp;
-    <a href="./search.html">Search</a>&nbsp;
+    <a href="#" id="search-link">Search</a>&nbsp;
     <a href="./update.html">Update</a>&nbsp;
     <a href="./contact.html">Contact</a><br><br>
 
@@ -17,14 +17,18 @@
     Enter Name: <input type="text" id="name"><br><br>&nbsp;
     Enter City: <input type="text" id="city"><br><br>
     Enter Fees: <input type="text" id="fee"><br><br>
-    
+
+    <div id="search-box" style="display: none;">
+        Enter ID to Search: <input type="text" id="search"><br><br>
+        <button id="search-btn">Search</button>
+    </div><br><br>
+
     <h1>Student Records</h1>
-    <div id="student-list">
-        
-    </div>
+    <div id="student-list"></div>
 
     <button id="btn1">Add Student</button>
 </body>
 <script src="./addstudents.js"></script>
 <script src="./display.js"></script>
+<script src="./search.js" ></script>
 </html>
