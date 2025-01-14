@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Welcome to Bhopal</h1>
+    <h1 id="demo1">Welcome to College</h1>
+    
+    <script type="module">
+        import clg from "./UserInfo.js"
+        import {name, city, age} from "./UserInfo.js"
+        document.getElementById("demo").innerHTML = "Name : " + name + ", Age : " + age + ", City : " + city
+        document.getElementById("demo1").innerHTML = "College : " + clg();
+    </script>
+</body>
+</html>
