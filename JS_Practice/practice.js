@@ -1443,18 +1443,73 @@
 // 73. Write a JavaScript program to check if there is at least one element in two given sorted arrays of
 //      integers.
 
-function SameEle(arr1, arr2){
+// function SameEle(arr1, arr2){
 
-    for(let i = 0; i < arr1.length; i++){
-        for(let j = 0; j < arr2.length; j++){
-            if(arr1[i] === arr2[j]){
-                return `${arr1[i]} and ${arr2[j]} are same element.`
-            }
+//     for(let i = 0; i < arr1.length; i++){
+//         for(let j = 0; j < arr2.length; j++){
+//             if(arr1[i] === arr2[j]){
+//                 return `${arr1[i]} and ${arr2[j]} are same element.`
+//             }
+//         }
+//     }
+
+//     return false + " : " + arr1 + " : " + arr2
+// }
+// console.log(SameEle( [1, 2, 4, 6], [2, 5, 6, 8]));
+// console.log(SameEle( [1, 3, 5], [2, 4, 6]));
+
+
+// 74. Pallindrome
+
+// function CheckPallindrome(str) {
+
+//     str = str.toLowerCase();
+//     const len = str.length
+//     for(let i = 0; i < len/2; i++){
+//         if(str[i] !== str[len - 1 - i]){
+//             console.log(str[i] !== str[len - 1 - i]);
+//             return `it's not Pallindrome ${str}`
+//         }
+//     }
+//     return `it's Pallindrome ${str}`
+// }
+
+// console.log(CheckPallindrome("Madam"));
+
+
+// 75. Write a JavaScript program to check whether a given string contains only Latin letters and no
+//      two uppercase and no two lowercase letters are in adjacent positions.
+
+
+function isValidLatinString(input) {
+    // Check if the string contains only Latin letters
+    const isLatinOnly = /^[a-zA-Z]+$/.test(input);
+    if (!isLatinOnly) {
+        return false; // Contains non-Latin characters
+    }
+
+    // Check for adjacent uppercase or lowercase letters
+    for (let i = 0; i < input.length - 1; i++) {
+        const currentChar = input[i];
+        //console.log("Current Char", currentChar);
+        const nextChar = input[i + 1];
+        //console.log("Next Char", nextChar);
+
+        // If both are uppercase or both are lowercase
+        if (
+            (currentChar === currentChar.toUpperCase() && nextChar === nextChar.toUpperCase()) ||
+            (currentChar === currentChar.toLowerCase() && nextChar === nextChar.toLowerCase())
+        ) {
+            return false; // Invalid due to consecutive same-case letters
         }
     }
 
-    return false + " : " + arr1 + " : " + arr2
+    return true; // String is valid
 }
-console.log(SameEle( [1, 2, 4, 6], [2, 5, 6, 8]));
-console.log(SameEle( [1, 3, 5], [2, 4, 6]));
 
+// Test cases
+console.log(isValidLatinString("AbCdEf")); // true
+// console.log(isValidLatinString("AaBbCc")); // true
+// console.log(isValidLatinString("AaBBcC")); // false
+// console.log(isValidLatinString("abcDEF")); // false
+// console.log(isValidLatinString("123Ab"));  // false
