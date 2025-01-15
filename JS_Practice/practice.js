@@ -1482,20 +1482,16 @@
 
 
 function isValidLatinString(input) {
-    // Check if the string contains only Latin letters
     const isLatinOnly = /^[a-zA-Z]+$/.test(input);
     if (!isLatinOnly) {
-        return false; // Contains non-Latin characters
+        return false;
     }
 
-    // Check for adjacent uppercase or lowercase letters
     for (let i = 0; i < input.length - 1; i++) {
         const currentChar = input[i];
         //console.log("Current Char", currentChar);
         const nextChar = input[i + 1];
         //console.log("Next Char", nextChar);
-
-        // If both are uppercase or both are lowercase
         if (
             (currentChar === currentChar.toUpperCase() && nextChar === nextChar.toUpperCase()) ||
             (currentChar === currentChar.toLowerCase() && nextChar === nextChar.toLowerCase())
@@ -1504,12 +1500,11 @@ function isValidLatinString(input) {
         }
     }
 
-    return true; // String is valid
+    return true;
 }
 
-// Test cases
-console.log(isValidLatinString("AbCdEf")); // true
-// console.log(isValidLatinString("AaBbCc")); // true
-// console.log(isValidLatinString("AaBBcC")); // false
-// console.log(isValidLatinString("abcDEF")); // false
-// console.log(isValidLatinString("123Ab"));  // false
+console.log(isValidLatinString("AbCdEf"));
+// console.log(isValidLatinString("AaBbCc"));
+// console.log(isValidLatinString("AaBBcC"));
+// console.log(isValidLatinString("abcDEF"));
+// console.log(isValidLatinString("123Ab"));
