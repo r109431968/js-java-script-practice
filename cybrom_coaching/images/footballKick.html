@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Movement with Images</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 100px;
+            border: 2px solid black;
+            position: relative;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        #ball {
+            width: 50px;
+            height: 50px;
+            background-image: url('football.jpg');
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            left: 0;
+        }
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #play1, #stop1 {
+            background-image: url('play1.png');
+            background-size: cover;
+            border: none;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        #stop1 {
+            background-image: url('stop1.png');
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="ball"></div>
+    </div>
+    <div id="controls">
+        <button id="play1" title="Start"></button>
+        <button id="stop1" title="Stop"></button>
+    </div>
+
+    <script src="../ball.js"></script>
+</body>
+</html>
